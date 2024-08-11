@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<script>
+
+
+for(var i = 1 ; i<=15 ; i++){
+var mainDiv = document.createElement("div");
+document.body.appendChild(mainDiv);
+mainDiv.setAttribute("id" , `div${i}`);
+document.getElementById(`div${i}`).style.width = "100%";
+document.getElementById(`div${i}`).style.height = "10%";
+document.getElementById(`div${i}`).style.display = "flex";
+document.getElementById(`div${i}`).style.backgroundColor = "red";
+}
+
+for(var j=1; j<=15 ; j++){
+
+for(var k=1; k<=15 ; k++){
+
+var childDiv = document.createElement("div");
+document.getElementById(`div${j}`).appendChild(childDiv);
+childDiv.setAttribute("id" , `childDiv${k}`);
+childDiv.style.width = "10%";
+childDiv.style.height = "100%";
+
+var a = Math.floor(Math.random() * (250 - 1 + 1)) + 1;
+var b = Math.floor(Math.random() * (250 - 1 + 1)) + 1;
+var c = Math.floor(Math.random() * (250 - 1 + 1)) + 1;
+
+childDiv.style.backgroundColor = `rgb(${a},${b},${c})`;
+
+
+console.log(k);
+
+}
+
+console.log(j);
+}
+
+
+
+
+</script>
+
+</body>
+</html>
